@@ -1,0 +1,9 @@
+<div *ngFor="let widget of widgets"
+     class="widget-item"
+     [ngStyle]="getWidgetStyle(widget)"
+>
+  <app-rotated-wrapper *ngIf="widget.type === 'rotated'"
+                       [widget]="widget"
+  ></app-rotated-wrapper>
+  <app-normal-table *ngIf="widget.type === 'normal'"></app-normal-table>
+</div>
